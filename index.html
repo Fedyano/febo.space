@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+    <link rel="stylesheet" href="assets/mdc/css/material-components-web.css">
+    <link rel="stylesheet" href="assets/bts/css/bootstrap.min.css">
+
+
+    <title>FEBO.space</title>
+</head>
+<body>
+<style>
+
+    html, body {
+        font-family: 'Roboto Mono', sans-serif !important
+    }
+
+    html {
+        position: relative;
+        min-height: 100%;
+
+    }
+
+    body {
+        font-family: 'Roboto Mono', sans-serif !important;
+    }
+
+    main {
+        margin-bottom: 120px;
+        margin-top: 180px !important; /*добавленное правило для 3-х этажного меню*/
+    }
+
+    a {
+        text-decoration: none;
+        color: #FFFFFF;
+    }
+
+    a:hover {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    .footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        min-height: 60px;
+        line-height: 60px;
+        background-color: #f5f5f5;
+    }
+
+    :root {
+        --mdc-theme-primary: #757575;
+    }
+
+    .mdc-toolbar__title {
+        font-family: Roboto Mono, sans-serif; /*todo найти и исправить стиль на весь файл*/
+    }
+
+    @media only screen and (max-width: 992px) {
+        .hide-on-med-and-down {
+            display: none;
+        }
+    }
+</style>
+
+<div class="mdc-toolbar mdc-toolbar--fixed">
+    <div class="mdc-toolbar__row">
+        <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
+            <button class="demo-menu material-icons mdc-toolbar__icon--menu">menu</button>
+            <button class="material-icons mdc-toolbar__icon--menu">arrow_back</button>
+
+        </section>
+        <section class="mdc-toolbar__section mdc-toolbar__section--align-end" role="toolbar">
+            <a href="#" class="material-icons mdc-toolbar__icon">phone</a>
+            <a href="#" class="material-icons mdc-toolbar__icon">ring_volume</a>
+            <a href="#" class="material-icons mdc-toolbar__icon">message</a>
+            <a href="#" class="material-icons mdc-toolbar__icon">more_vert</a>
+        </section>
+    </div>
+    <div class="mdc-toolbar__row">
+        <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
+            <button class="demo-menu material-icons mdc-toolbar__icon--menu">arrow_back</button>
+            <button class="material-icons mdc-toolbar__icon--menu">tune</button>
+            <span class="mdc-toolbar__title">Title</span>
+        </section>
+    </div>
+    <div class="mdc-toolbar__row" style="background-color: #FFFFFF;">
+        <div class="input-group p-2 container">
+            <input type="text" class="form-control " placeholder="Поиск ... " aria-label="Поиск ... "
+                   style=" background:url(assets/img/search.png) no-repeat right">
+            <span class="input-group-btn">
+        <a href="#" class="btn btn-outline-success"><i class="material-icons">arrow_forward</i></a>
+        </span>
+        </div>
+    </div>
+</div>
+
+<aside class="mdc-temporary-drawer">
+    <nav class="mdc-temporary-drawer__drawer">
+        <header class="mdc-temporary-drawer__header" style="">
+            <div class="mdc-temporary-drawer__header-content mdc-theme--background  mdc-theme--primary-bg">
+                febo.space
+            </div>
+        </header>
+        <nav class="mdc-temporary-drawer__content mdc-list-group">
+            <div id="icon-with-text-demo" class="mdc-list">
+                <a class="mdc-list-item mdc-temporary-drawer--selected mdc-ripple-surface mdc-ripple-surface--primary mdc-theme--primary mdc-ripple-upgraded"
+                   href="#">
+                    <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">inbox</i>Link
+                </a>
+                <a class="mdc-list-item mdc-temporary-drawer--selected mdc-ripple-surface mdc-ripple-surface--primary mdc-theme--primary mdc-ripple-upgraded"
+                   href="#">
+                    <i class="material-icons  mdc-list-item__start-detail" aria-hidden="true">inbox</i>inbox</a>
+                <a class="mdc-list-item" href="#">
+                    <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">star</i>Star
+                </a>
+                <a class="mdc-list-item" href="#">
+                    <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">send</i>Sent Mail
+                </a>
+                <a class="mdc-list-item" href="#">
+                    <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">drafts</i>Drafts
+                </a>
+            </div>
+
+            <hr class="mdc-list-divider">
+
+            <div class="mdc-list">
+                <a class="mdc-list-item" href="#">
+                    <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">email</i>All Mail
+                </a>
+                <a class="mdc-list-item" href="#">
+                    <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">delete</i>Trash
+                </a>
+                <a class="mdc-list-item" href="#">
+                    <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">report</i>Spam
+                </a>
+            </div>
+        </nav>
+    </nav>
+</aside>
+
+<main class="mdc-toolbar-fixed-adjust">
+    <div class="mdc-toolbar-fixed-adjust"></div>
+    <div class="container">
+        <div class="row">
+            <ol class="breadcrumb bg-white">
+                <li class="breadcrumb-item"><a href="#" class="text-dark">Home</a></li>
+                <li class="breadcrumb-item"><a href="#" class="text-dark">Library</a></li>
+                <li class="breadcrumb-item active text-primary">Data</li>
+            </ol>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="mdc-card">
+                    <section class="mdc-card__primary mdc-theme--primary-bg">
+                        <h1 class="mdc-card__title mdc-card__title--large mdc-theme--text-primary-on-primary">Title goes
+                            here</h1>
+                        <h2 class="mdc-card__subtitle">Subtitle here</h2>
+                    </section>
+                    <section class="mdc-card__supporting-text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat.
+                    </section>
+                    <section class="mdc-card__actions">
+                        <button class="mdc-fab material-icons" aria-label="Favorite" style="bottom: 36px; left: 80%">
+                          <span class="mdc-fab__icon">
+                            add
+                          </span>
+                        </button>
+                        <h1 class="mdc-card__actions mdc-card__title--large text-success">10 000 р</h1>
+                    </section>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="mdc-card">
+                    <section class="mdc-card__primary">
+                        <h1 class="mdc-card__title mdc-card__title--large">Title goes here</h1>
+                        <h2 class="mdc-card__subtitle">Subtitle here</h2>
+                    </section>
+                    <section class="mdc-card__supporting-text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat.
+                    </section>
+                    <section class="mdc-card__actions">
+                        <button class="mdc-fab material-icons" aria-label="Favorite" style="bottom: 36px; left: 80%">
+                          <span class="mdc-fab__icon">
+                            add
+                          </span>
+                        </button>
+                        <h1 class="mdc-card__actions mdc-card__title--large text-success">10 000 р</h1>
+                    </section>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="mdc-card demo-card">
+                    <section class="mdc-card__primary">
+                        <h1 class="mdc-card__title mdc-card__title--large">Title goes here</h1>
+                        <h2 class="mdc-card__subtitle">Subtitle here</h2>
+                    </section>
+                    <section class="mdc-card__supporting-text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat.
+                    </section>
+                    <section class="mdc-card__actions">
+                        <button class="mdc-fab material-icons" aria-label="Favorite" style="bottom: 36px; left: 80%">
+                          <span class="mdc-fab__icon">
+                            add
+                          </span>
+                        </button>
+                        <h1 class="mdc-card__actions mdc-card__title--large text-success">10 000 р</h1>
+                    </section>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="mdc-card demo-card">
+                    <section class="mdc-card__primary">
+                        <h1 class="mdc-card__title mdc-card__title--large">Title goes here</h1>
+                        <h2 class="mdc-card__subtitle">Subtitle here</h2>
+                    </section>
+                    <section class="mdc-card__supporting-text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat.
+                    </section>
+                    <section class="mdc-card__actions">
+                        <button class="mdc-fab material-icons" aria-label="Favorite" style="bottom: 36px; left: 80%">
+                          <span class="mdc-fab__icon">
+                            add
+                          </span>
+                        </button>
+                        <h1 class="mdc-card__actions mdc-card__title--large text-success">10 000 р</h1>
+                    </section>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="mdc-card demo-card">
+                    <section class="mdc-card__primary">
+                        <h1 class="mdc-card__title mdc-card__title--large">Title goes here</h1>
+                        <h2 class="mdc-card__subtitle">Subtitle here</h2>
+                    </section>
+                    <section class="mdc-card__supporting-text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat.
+                    </section>
+                    <section class="mdc-card__actions">
+                        <button class="mdc-fab material-icons" aria-label="Favorite" style="bottom: 36px; left: 80%">
+                          <span class="mdc-fab__icon">
+                            add
+                          </span>
+                        </button>
+                        <h1 class="mdc-card__actions mdc-card__title--large text-success">10 000 р</h1>
+                    </section>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="mdc-card demo-card">
+                    <section class="mdc-card__primary">
+                        <h1 class="mdc-card__title mdc-card__title--large">Title goes here</h1>
+                        <h2 class="mdc-card__subtitle">Subtitle here</h2>
+                    </section>
+                    <section class="mdc-card__supporting-text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat.
+                    </section>
+                    <section class="mdc-card__actions">
+                        <button class="mdc-fab material-icons" aria-label="Favorite" style="bottom: 36px; left: 80%">
+                          <span class="mdc-fab__icon">
+                            add
+                          </span>
+                        </button>
+                        <h1 class="mdc-card__actions mdc-card__title--large text-success">10 000 р</h1>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="mdc-card">
+                    <div class="mdc-card__horizontal-block">
+                        <section class="mdc-card__primary">
+                            <h1 class="mdc-card__title mdc-card__title--large">TOYOTA</h1>
+                            <h2 class="mdc-card__subtitle">28100-17030</h2>
+                            <h2 class="mdc-card__subtitle">Доступно за 24 часа</h2>
+                            <h2 class="mdc-card__subtitle">Есть на складе 100</h2>
+                        </section>
+                        <img class="mdc-card__media-item mdc-card__media-item--2x" src="assets/img/loyalty.png">
+                    </div>
+                    <section class="mdc-card__actions bg-light">
+                        <button class="mdc-fab material-icons" aria-label="Favorite" style="bottom: 36px; left: 80%">
+                          <span class="mdc-fab__icon">
+                            add
+                          </span>
+                        </button>
+                        <h1 class="mdc-card__actions mdc-card__title--large text-success">10 000 р</h1>
+                    </section>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="mdc-card">
+                    <div class="mdc-card__horizontal-block">
+                        <section class="mdc-card__primary">
+                            <h1 class="mdc-card__title mdc-card__title--large">TOYOTA</h1>
+                            <h2 class="mdc-card__subtitle">28100-17030</h2>
+                            <h2 class="mdc-card__subtitle">Доступно за 24 часа</h2>
+                            <h2 class="mdc-card__subtitle">Есть на складе 100</h2>
+                        </section>
+                        <img class="mdc-card__media-item mdc-card__media-item--2x" src="assets/img/loyalty.png">
+                    </div>
+                    <section class="mdc-card__actions bg-light">
+                        <button class="mdc-fab material-icons" aria-label="Favorite" style="bottom: 36px; left: 80%">
+                          <span class="mdc-fab__icon">
+                            add
+                          </span>
+                        </button>
+                        <h1 class="mdc-card__actions mdc-card__title--large text-success">10 000 р</h1>
+                    </section>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="mdc-card">
+                    <div class="mdc-card__horizontal-block">
+                        <section class="mdc-card__primary">
+                            <h1 class="mdc-card__title mdc-card__title--large">TOYOTA</h1>
+                            <h2 class="mdc-card__subtitle">28100-17030</h2>
+                            <h2 class="mdc-card__subtitle">Доступно за 24 часа</h2>
+                            <h2 class="mdc-card__subtitle">Есть на складе 100</h2>
+                        </section>
+                        <img class="mdc-card__media-item mdc-card__media-item--2x" src="assets/img/loyalty.png">
+                    </div>
+                    <section class="mdc-card__actions bg-light">
+                        <button class="mdc-fab material-icons" aria-label="Favorite" style="bottom: 36px; left: 80%">
+                          <span class="mdc-fab__icon">
+                            add
+                          </span>
+                        </button>
+                        <h1 class="mdc-card__actions mdc-card__title--large text-success">10 000 р</h1>
+                    </section>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="mdc-card">
+                    <div class="mdc-card__horizontal-block">
+                        <section class="mdc-card__primary">
+                            <h1 class="mdc-card__title mdc-card__title--large">TOYOTA</h1>
+                            <h2 class="mdc-card__subtitle">28100-17030</h2>
+                            <h2 class="mdc-card__subtitle">Доступно за 24 часа</h2>
+                            <h2 class="mdc-card__subtitle">Есть на складе 100</h2>
+                        </section>
+                        <img class="mdc-card__media-item mdc-card__media-item--2x" src="assets/img/loyalty.png">
+                    </div>
+                    <section class="mdc-card__actions bg-light">
+                        <button class="mdc-fab material-icons" aria-label="Favorite" style="bottom: 36px; left: 80%">
+                          <span class="mdc-fab__icon">
+                            add
+                          </span>
+                        </button>
+                        <h1 class="mdc-card__actions mdc-card__title--large text-success">10 000 р</h1>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<script src="assets/bbs/js/jquery-3.2.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
+        integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+        crossorigin="anonymous"></script>
+<script src="assets/bts/js/bootstrap.min.js"></script>
+<script src="assets/mdc/js/material-components-web.js"></script>
+<script src="assets/bbs/js/main.js"></script>
+</body>
+</html>
